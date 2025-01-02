@@ -639,18 +639,6 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b8636c3c-d65c-4cfa-a02e-6976eed5d7ff
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c4886f4b-e808-4511-b43f-5174af7161bb
-    m_ActionName: Player/Look[/Mouse/delta,/Touchscreen/delta,/Pen/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3781df3b-0c8c-4654-b0a0-79ac8e5fdc73
-    m_ActionName: Player/Fire[/Mouse/leftButton,/Touchscreen/primaryTouch/tap]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1225383382}
         m_TargetAssemblyTypeName: DataBox, Assembly-CSharp
@@ -706,6 +694,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6c312c7f-7517-4422-8409-58ad33c8b7b8
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1225383382}
+        m_TargetAssemblyTypeName: DataBox, Assembly-CSharp
+        m_MethodName: SetCancel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 12d24f05-c1cb-4fec-abde-639a67375bbd
+    m_ActionName: Player/Cancel[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

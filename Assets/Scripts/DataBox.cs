@@ -70,6 +70,14 @@ public class DataBox : MonoBehaviour
         }
     }
 
+    public void SetCancel(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            Debug.Log("SetCancel");
+        }
+    }
+
     void MatchStart()
     {
         Debug.Log("MatchStart");
@@ -141,7 +149,7 @@ public class DataBox : MonoBehaviour
         turnCount++;
         Debug.Log("NextTurn:" + turnCount);
         //ターン開始時ドロー(枚数は後で)
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             StateChange(deckCards[0], state.hand);
             deckCards.RemoveAt(0);
@@ -185,8 +193,16 @@ public class DataBox : MonoBehaviour
                     if(usingCards[i].gameObject == card.gameObject)
                     {
                         usingCards.RemoveAt(i);
+                        Debug.Log("UsingRemove:" + usingCards.Count);
+                        break;
+                    }
+                }
+                for (int i = 0; i < handCards.Count; i++)
+                {
+                    if (handCards[i].gameObject == card.gameObject)
+                    {
                         handCards.RemoveAt(i);
-                        Debug.Log("Remove:" + usingCards.Count);
+                        Debug.Log("HandRemove:" + handCards.Count);
                         break;
                     }
                 }

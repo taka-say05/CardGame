@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//再ロックオンができない
 //矢印の先端に付ける想定のコード
 public class Arrow : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Unit" && arrow_set == false && targetUnit == null)
+        if (collision.gameObject.tag == "Unit" && !collision.gameObject.GetComponent<Unit>().player && arrow_set == false && targetUnit == null)
         {
             targetUnit = collision.gameObject.GetComponent<Unit>();
             if (targetUnit == null)
@@ -56,8 +57,9 @@ public class Arrow : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Unit")
+        if (collision.gameObject.tag == "Unit" && !collision.gameObject.GetComponent<Unit>().player)
         {
+            Debug.Log("lockoff");
             arrow_set_ready = false;
             targetUnit = null;
         }

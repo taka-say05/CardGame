@@ -5,7 +5,7 @@ public class Topaz : Card
 {
     public override void Use()
     {
-        Attack(2 * targetUnit.carryEffects.burn.stack, attackType.Impact, attackAttribute.Heat, AddBurn);        
+        Attack(2 * targetUnit.carryEffects.burn.stack, attackType.Impact, attackAttribute.Heat, AddBurn);
 
         Attack(8, attackType.Impact, attackAttribute.Heat);
 

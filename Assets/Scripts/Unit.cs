@@ -116,9 +116,15 @@ public class Unit : MonoBehaviour
                 }
             }
         }
+    }
 
-
-
+    protected void Update()
+    {
+        if (hp <= 0)
+        {
+            hp = 0;
+            Destroy(gameObject);
+        }
     }
 
     public int OnAttack(int damage)

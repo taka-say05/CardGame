@@ -36,7 +36,6 @@ public abstract class Card : MonoBehaviour
     GameObject arrowInstance;
     Arrow arrow;
     protected Unit ownerUnit;
-    bool targeted = false;//‘½•ªŒã‚Å‚ß‚ñ‚Ç‚­‚³‚­‚È‚é‚â‚Â
     
     protected void Awake()
     {
@@ -65,15 +64,17 @@ public abstract class Card : MonoBehaviour
 
         if (arrow != null)
         {
-            if (arrow.targetUnit != null && targetUnit == null)
+            if (arrow.targetUnit != null)
             {
-                if (!targeted)
+                if (targetUnit == null)
                 {
-                    targeted = true;
                     Debug.Log("lockOn");
                     targetUnit = arrow.targetUnit;
-                    dataBox.addUsingCards(this);
                 }
+            }
+            else
+            {
+                targetUnit = null;
             }
         }
     }
@@ -107,6 +108,10 @@ public abstract class Card : MonoBehaviour
         if (slot_set == false)
         {
             dataBox.StateChange(this, state.reset);
+        }
+        else
+        {
+            dataBox.addUsingCards(this);
         }
     }
 
