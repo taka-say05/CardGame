@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public enum state
 {
@@ -33,6 +34,8 @@ public abstract class Card : MonoBehaviour
     Vector2 default_scale;
     [System.NonSerialized] public BoxCollider2D bc;
     [System.NonSerialized] public Rigidbody2D rb;
+
+    [System.NonSerialized] public SortingGroup sortingGroup;
     GameObject arrowInstance;
     Arrow arrow;
     protected Unit ownerUnit;
@@ -42,6 +45,7 @@ public abstract class Card : MonoBehaviour
         default_scale = transform.localScale;
         bc = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        sortingGroup = GetComponent<SortingGroup>();
         if (dataBox == null)
         {
             dataBox = GameObject.FindWithTag("DataBox").GetComponent<DataBox>();

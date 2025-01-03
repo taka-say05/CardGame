@@ -222,6 +222,7 @@ public class DataBox : MonoBehaviour
         for (int i = 0; i < handCards.Count; i++)
         {
             handCards[i].transform.position = pivotVector + new Vector2(2 * i, 0);
+            handCards[i].sortingGroup.sortingOrder = i;
         }
 
     }
