@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Slot : MonoBehaviour
@@ -7,6 +5,8 @@ public class Slot : MonoBehaviour
     public Unit ownerUnit;
     [SerializeField] SpriteRenderer outline_renderer;
     Card use_card;
+
+    bool isSetting = false;
 
     // Start is called before the first frame update
     protected void Start()
@@ -36,7 +36,7 @@ public class Slot : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Card" && use_card != null)
+        if (collision.gameObject.tag == "Card" && !collision.gameObject.GetComponent<Card>().setting)
         {
             use_card.slot_set = false;
             outline_renderer.enabled = false;

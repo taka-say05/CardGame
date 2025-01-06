@@ -29,6 +29,7 @@ public abstract class Card : MonoBehaviour
 
     [System.NonSerialized] public bool slot_set_ready = true;//マウスが離されているか(=スロットにセットしていいか)
     [System.NonSerialized] public bool slot_set = false;//スロットに重なっているか(=スロットにセットされようとしているか)
+    [System.NonSerialized] public bool setting = false;
     [System.NonSerialized] public Vector2 default_position;
 
     Vector2 default_scale;
@@ -39,6 +40,7 @@ public abstract class Card : MonoBehaviour
     GameObject arrowInstance;
     Arrow arrow;
     protected Unit ownerUnit;
+
     
     protected void Awake()
     {
@@ -99,11 +101,14 @@ public abstract class Card : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        slot_set_ready = false;
-        Vector3 thisPosition = Input.mousePosition;
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(thisPosition);
-        worldPosition.z = 0f;
-        transform.position = worldPosition;
+        if (!setting)
+        {
+            slot_set_ready = false;
+            Vector3 thisPosition = Input.mousePosition;
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(thisPosition);
+            worldPosition.z = 0f;
+            transform.position = worldPosition;
+        }
     }
 
     private void OnMouseUp()
@@ -111,10 +116,12 @@ public abstract class Card : MonoBehaviour
         slot_set_ready = true;
         if (slot_set == false)
         {
+            setting = false;
             dataBox.StateChange(this, state.reset);
         }
         else
         {
+            setting = true;
             dataBox.addUsingCards(this);
         }
     }
