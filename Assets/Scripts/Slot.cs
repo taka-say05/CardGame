@@ -6,8 +6,6 @@ public class Slot : MonoBehaviour
     [SerializeField] SpriteRenderer outline_renderer;
     Card use_card;
 
-    bool isSetting = false;
-
     // Start is called before the first frame update
     protected void Start()
     {
@@ -29,6 +27,7 @@ public class Slot : MonoBehaviour
                 use_card = collision.gameObject.GetComponent<Card>();
             }
 
+            collision.gameObject.GetComponent<Card>().slot = this;
             outline_renderer.enabled = true;
             use_card.slot_set = true;
         }

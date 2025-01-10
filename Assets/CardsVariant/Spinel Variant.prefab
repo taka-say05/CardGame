@@ -99,4 +99,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   full_renderer: {fileID: 7756639226090549339}
-  arrowPrefab: {fileID: 2452919371272084423, guid: debfdb370d55f9b42b9fe0b77bba7bb8, type: 3}
+  arrowPrefab: {fileID: 4980329250549865215, guid: 4b4e6e745537ed2409b65b5a7cd2845d, type: 3}

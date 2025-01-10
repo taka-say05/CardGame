@@ -7,26 +7,32 @@ using UnityEngine.UI;
 //矢印の先端に付ける想定のコード
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] GameObject arrow_line;
+    //[SerializeField] GameObject arrow_line;
 
     [System.NonSerialized] public bool arrow_set_ready = false;//矢印がユニットと重なっているか(=セットしようとしているか)
     [System.NonSerialized] public bool arrow_set = false;//ユニット上で(=readyがtrueで)クリックされたか(=>セットされているか)
     [System.NonSerialized] public Unit targetUnit;
+    [SerializeField] GameObject originPoint;
 
     Vector3 target_position;
+
+    BezierCurve curve;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        curve = GetComponentInChildren<BezierCurve>();
+        curve.point0 = originPoint.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         arrow_line.transform.localScale = new Vector3(get_distance() / 100, arrow_line.transform.localScale.y, arrow_line.transform.localScale.z);
 
         arrow_line.transform.eulerAngles = new Vector3(0, 0, get_angle());
+        */
 
         if (arrow_set)
         {
@@ -39,6 +45,8 @@ public class Arrow : MonoBehaviour
             worldPosition.z = 0f;
             transform.position = worldPosition;
         }
+
+        transform.eulerAngles = new Vector3(0, 0, curve.angle_z - 90);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -73,6 +81,7 @@ public class Arrow : MonoBehaviour
         }
     }
 
+    /*
     private float get_distance()
     {
         float distance_x = transform.position.x - arrow_line.transform.position.x;
@@ -83,13 +92,5 @@ public class Arrow : MonoBehaviour
         return distance;
     }
 
-    private float get_angle()
-    {
-        float y = arrow_line.transform.position.y - transform.position.y;
-        float x = arrow_line.transform.position.x - transform.position.x;
-
-        float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg + 180;
-
-        return angle;
-    }
+    */
 }

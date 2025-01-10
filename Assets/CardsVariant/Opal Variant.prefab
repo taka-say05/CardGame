@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   full_renderer: {fileID: 8073523020334025843}
-  arrowPrefab: {fileID: 2452919371272084423, guid: debfdb370d55f9b42b9fe0b77bba7bb8, type: 3}
+  arrowPrefab: {fileID: 4980329250549865215, guid: 4b4e6e745537ed2409b65b5a7cd2845d, type: 3}
 --- !u!212 &8073523020334025843 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4836973427788094303, guid: 20c85d2a80e2be64a9204eaa25b03419, type: 3}

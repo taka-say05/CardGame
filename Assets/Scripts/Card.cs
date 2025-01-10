@@ -31,6 +31,7 @@ public abstract class Card : MonoBehaviour
     [System.NonSerialized] public bool slot_set = false;//スロットに重なっているか(=スロットにセットされようとしているか)
     [System.NonSerialized] public bool setting = false;
     [System.NonSerialized] public Vector2 default_position;
+    [System.NonSerialized] public Slot slot;
 
     Vector2 default_scale;
     [System.NonSerialized] public BoxCollider2D bc;
@@ -61,11 +62,22 @@ public abstract class Card : MonoBehaviour
             full_renderer.enabled = false;
             transform.localScale = default_scale * 0.5f;
         }
-        else
+        else if (!setting)
         {
             targetUnit = null;
             full_renderer.enabled = true;
             transform.localScale = default_scale;
+        }
+
+        if (setting)
+        {
+            transform.position = slot.transform.position;
+            if (arrow == null)
+            {
+                arrowInstance = Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+                arrow = arrowInstance.GetComponentInChildren<Arrow>();
+                ownerUnit = slot.gameObject.GetComponent<Slot>().ownerUnit;
+            }
         }
 
         if (arrow != null)
@@ -85,7 +97,7 @@ public abstract class Card : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Slot" && slot_set_ready)
         {
@@ -97,7 +109,7 @@ public abstract class Card : MonoBehaviour
                 ownerUnit = collision.gameObject.GetComponent<Slot>().ownerUnit;
             }
         }
-    }
+    }*/
 
     private void OnMouseDrag()
     {

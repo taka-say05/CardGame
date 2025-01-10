@@ -192,6 +192,7 @@ public class DataBox : MonoBehaviour
                 {
                     if(usingCards[i].gameObject == card.gameObject)
                     {
+                        usingCards[i].setting = false;
                         usingCards.RemoveAt(i);
                         Debug.Log("UsingRemove:" + usingCards.Count);
                         break;
