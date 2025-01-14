@@ -10,13 +10,16 @@ public abstract class Effect : MonoBehaviour
     [System.NonSerialized] public int stack = 0;
     [System.NonSerialized] public int boostValue = 0;
     protected Unit carrierUnit;
-    [SerializeField] GameObject stackText;
+    GameObject stackText;
+    GameObject icon;
     TextMeshPro text;
     int id;
 
     public void Init(Unit carrierUnit)
     {
         this.carrierUnit = carrierUnit;
+        icon = Instantiate((GameObject)Resources.Load("icon/" + this.GetType().Name), transform);
+        stackText = icon.transform.Find("text").gameObject;
         text = stackText.GetComponent<TextMeshPro>();
     }
 
