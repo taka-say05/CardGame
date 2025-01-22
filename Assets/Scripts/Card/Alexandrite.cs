@@ -11,7 +11,7 @@ public class Alexandrite : Card
 
     void ConvertEffect()
     {
-        if (targetUnit.carryEffects.crystallization.stack >= 5)
+        if (targetUnit.carryEffects.crystalize.stack >= 5)
         {
             int addCount = 0;
             addCount += targetUnit.attackBoost > 0? targetUnit.attackBoost : 0;

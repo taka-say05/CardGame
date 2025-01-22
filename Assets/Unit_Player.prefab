@@ -176,10 +176,9 @@ MonoBehaviour:
   greenBar_pivot: {fileID: 8065138284650206494}
   hpText: {fileID: 5612846718085886678}
   player: 0
-  weaknessImpact: 1
-  weaknessSlash: 0
-  weaknessPenetration: 0
-  hp: 50
+  weaknessType: 0
+  weaknessAttribute: 0
+  hp: 1000
   speed: 3
 --- !u!1 &4658763233855237326
 GameObject:

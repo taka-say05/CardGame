@@ -24,7 +24,7 @@ public class Sapphire : Card
 
     void OnHit1and2()
     {
-        targetUnit.carryEffects.laceration.AddStack(giveValue); 
+        targetUnit.carryEffects.laceration.AddStack(giveValue);
     }
 
     void OnHit3()

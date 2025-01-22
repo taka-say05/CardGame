@@ -194,7 +194,6 @@ public class DataBox : MonoBehaviour
                     {
                         usingCards[i].setting = false;
                         usingCards.RemoveAt(i);
-                        Debug.Log("UsingRemove:" + usingCards.Count);
                         break;
                     }
                 }
@@ -203,7 +202,6 @@ public class DataBox : MonoBehaviour
                     if (handCards[i].gameObject == card.gameObject)
                     {
                         handCards.RemoveAt(i);
-                        Debug.Log("HandRemove:" + handCards.Count);
                         break;
                     }
                 }

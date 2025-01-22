@@ -5,7 +5,6 @@ public class ResistanceDecrease : Effect
     //ターン開始時呼び出す。スタックはその時用で、即時減少させたい場合は直接unitのやつをいじる
     public override void Trigger()
     {
-        Debug.Log("Decrease");
         carrierUnit.resistanceBoost -= stack;
         DecreaseText(stack);
         stack = 0;

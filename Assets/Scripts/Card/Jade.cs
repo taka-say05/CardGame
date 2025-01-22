@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//å„Ç≈çÏÇÎÇ§
 public class Jade : Card
 {
     public override void OnTurnStart()
@@ -11,9 +12,17 @@ public class Jade : Card
 
     public override void Use()
     {
-        Attack(2 * targetUnit.carryEffects.burn.stack, attackType.Impact, attackAttribute.Heat);
-        targetUnit.carryEffects.burn.AddStack(5);
+        FirstAttack();
+    }
 
-        Attack(8, attackType.Impact, attackAttribute.Heat);
+    void FirstAttack()
+    {
+        Attack(1, attackType.Impact, attackAttribute.Crystal, Hit_1);
+        targetUnit.carryEffects.crystalize.AddStack(5);
+    }
+
+    void Hit_1()
+    {
+
     }
 }

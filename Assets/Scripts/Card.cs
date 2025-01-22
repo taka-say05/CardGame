@@ -153,12 +153,13 @@ public abstract class Card : MonoBehaviour
 
         if (target.GetDamage(damageValue, type, attribute) == true)
         {
-            if(onHit != null) 
-            { 
+            if (onHit != null)
+            {
                 onHit();
             }
         }
     }
+
 
     public virtual void OnTurnEnd()
     {

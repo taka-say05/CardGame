@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum attackType
@@ -44,7 +46,7 @@ public class Unit : MonoBehaviour
         public AttackDecrease attackDecrease;
         public Bleeding bleeding;
         public Burn burn;
-        public Crystallization crystallization;
+        public Crystalize crystalize;
         public Freeze freeze;
         public Laceration laceration;
         public Poison poison;
@@ -54,42 +56,45 @@ public class Unit : MonoBehaviour
 
     [System.NonSerialized] public Effects carryEffects;
 
+    List<GameObject> icons = new List<GameObject>();
+    List<GameObject> icons_active = new List<GameObject>();
+
+
     // Start is called before the first frame update
     protected void Start()
     {
         hpMax = hp;
         hpText.text = hpMax.ToString();
 
-
         carryEffects.attackBoost = gameObject.AddComponent<AttackBoost>();
-        carryEffects.attackBoost.Init(this);
+        icons.Add(carryEffects.attackBoost.Init(this));
 
         carryEffects.attackDecrease = gameObject.AddComponent<AttackDecrease>();
-        carryEffects.attackDecrease.Init(this);
+        icons.Add(carryEffects.attackDecrease.Init(this));
 
         carryEffects.bleeding = gameObject.AddComponent<Bleeding>();
-        carryEffects.bleeding.Init(this);
+        icons.Add(carryEffects.bleeding.Init(this));
 
-        carryEffects.crystallization = gameObject.AddComponent<Crystallization>();
-        carryEffects.crystallization.Init(this);
+        carryEffects.crystalize = gameObject.AddComponent<Crystalize>();
+        icons.Add(carryEffects.crystalize.Init(this));
 
         carryEffects.burn = gameObject.AddComponent<Burn>();
-        carryEffects.burn.Init(this);
+        icons.Add(carryEffects.burn.Init(this));
 
         carryEffects.freeze = gameObject.AddComponent<Freeze>();
-        carryEffects.freeze.Init(this);
+        icons.Add(carryEffects.freeze.Init(this));
 
         carryEffects.laceration = gameObject.AddComponent<Laceration>();
-        carryEffects.laceration.Init(this);
+        icons.Add(carryEffects.laceration.Init(this));
 
         carryEffects.poison = gameObject.AddComponent<Poison>();
-        carryEffects.poison.Init(this);
+        icons.Add(carryEffects.poison.Init(this));
 
         carryEffects.resistanceBoost = gameObject.AddComponent<ResistanceBoost>();
-        carryEffects.resistanceBoost.Init(this);
+        icons.Add(carryEffects.resistanceBoost.Init(this));
 
         carryEffects.resistanceDecrease = gameObject.AddComponent<ResistanceDecrease>();
-        carryEffects.resistanceDecrease.Init(this);
+        icons.Add(carryEffects.resistanceDecrease.Init(this));
 
         DataBox data = GameObject.FindGameObjectWithTag("DataBox").GetComponent<DataBox>();
         if (player)
@@ -116,6 +121,11 @@ public class Unit : MonoBehaviour
                 }
             }
         }
+
+        foreach (GameObject disActive_icon in icons)
+        {
+            disActive_icon.SetActive(false);
+        }
     }
 
     protected void Update()
@@ -135,7 +145,6 @@ public class Unit : MonoBehaviour
 
     public bool GetDamage(int damageValue, attackType type, attackAttribute attribute)//未実装箇所あり。ダメージ量アップ
     {
-        Debug.Log("Damage");
         if (weaknessType == type)
         {
             damageValue = (int)(damageValue * 1.5f);
@@ -147,7 +156,6 @@ public class Unit : MonoBehaviour
         }
 
         hp -= damageValue;
-        Debug.Log("EnemyHP:" + hp);
         greenBar_pivot.transform.localScale = new Vector3(1.0f * hp / hpMax, 1, 1);
         hpText.text = hp.ToString();
 
@@ -169,6 +177,48 @@ public class Unit : MonoBehaviour
         //毒効果処理
         carryEffects.poison.Trigger();
         //結晶化
-        carryEffects.crystallization.Trigger();
+        carryEffects.crystalize.Trigger();
+    }
+
+    public void AddActiveIcon(GameObject icon)
+    {
+        if (icons_active.Contains(icon) == false)
+        {
+            icons_active.Add(icon);
+        }
+
+        foreach (GameObject disActive_icon in icons)
+        {
+            disActive_icon.SetActive(false);
+        }
+
+        Vector2 pivot = new Vector2(-0.7f, -1.45f);
+
+        for (int i = 0; i < icons_active.Count; i++)
+        {
+            icons_active[i].SetActive(true);
+            icons_active[i].transform.localPosition = pivot + new Vector2(0.55f * i, 0);
+        }
+    }
+
+    public void RemoveActiveIcon(GameObject icon)
+    {
+        if (icons_active.Contains(icon) == true)
+        {
+            icons_active.Remove(icon);
+        }
+
+        foreach (GameObject disActive_icon in icons)
+        {
+            disActive_icon.SetActive(false);
+        }
+
+        Vector2 pivot = new Vector2(-0.7f, -1.45f);
+
+        for (int i = 0; i < icons_active.Count; i++)
+        {
+            icons_active[i].SetActive(true);
+            icons_active[i].transform.localPosition = pivot + new Vector2(0.55f * i, 0);
+        }
     }
 }

@@ -21,16 +21,16 @@ public class Diamond : Card
 
     void OnHit2()
     {
-        targetUnit.carryEffects.crystallization.AddStack(1);
+        targetUnit.carryEffects.crystalize.AddStack(1);
     }
 
     void ThirdAttack()
     {
         Attack(3, attackType.Slash, attackAttribute.Crystal);
 
-        if (targetUnit.carryEffects.crystallization.stack >= 3)
+        if (targetUnit.carryEffects.crystalize.stack >= 3)
         {
-            targetUnit.carryEffects.crystallization.stack -= 1;
+            targetUnit.carryEffects.crystalize.stack -= 1;
             ThirdAttack();
         }
     }
