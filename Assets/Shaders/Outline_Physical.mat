@@ -7,13 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline_Lightning
+  m_Name: Outline_Physical
   m_Shader: {fileID: 4800000, guid: 62505ee61d20098489c6f861ed25cce1, type: 3}
   m_Parent: {fileID: 2100000, guid: 5a6db85ebb9466f4b90af9ebdd3c4fdc, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
   - ETC1_EXTERNAL_ALPHA
+  - _CONNECTEDALPHA_ON
   - _FRAMEMODE_GENERAL
   - _OUTLINEENABLED_ON
   - _OUTLINEMODE_SOLID
@@ -36,13 +37,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ConnectedAlpha: 0
+    - _ConnectedAlpha: 1
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlinePosition: 0
     - _OutlineShape: 0
     - _Thickness: 7
     m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _GradientOutline1: {r: 0, g: 0, b: 0, a: 1}
-    - _SolidOutline: {r: 0.68272305, g: 0, b: 1, a: 0.3882353}
+    - _SolidOutline: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 0.3882353}
   m_BuildTextureStacks: []

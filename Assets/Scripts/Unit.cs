@@ -34,7 +34,7 @@ public class Unit : MonoBehaviour
     public int speed = 3;
     [System.NonSerialized] public int hpMax = 50;
 
-    [System.NonSerialized] public int attackBoost = 0;
+    [System.NonSerialized] public int damageBoost = 0;
     [System.NonSerialized] public int resistanceBoost = 0;
     [System.NonSerialized] public int[] boostAttribute = new int[5];
     [System.NonSerialized] public int[] boostType = new int[3];
@@ -50,7 +50,7 @@ public class Unit : MonoBehaviour
         public Freeze freeze;
         public Laceration laceration;
         public Poison poison;
-        public ResistanceBoost resistanceBoost;
+        public ResistanceIncreace resistanceIncreace;
         public ResistanceDecrease resistanceDecrease;
     }
 
@@ -90,8 +90,8 @@ public class Unit : MonoBehaviour
         carryEffects.poison = gameObject.AddComponent<Poison>();
         icons.Add(carryEffects.poison.Init(this));
 
-        carryEffects.resistanceBoost = gameObject.AddComponent<ResistanceBoost>();
-        icons.Add(carryEffects.resistanceBoost.Init(this));
+        carryEffects.resistanceIncreace = gameObject.AddComponent<ResistanceIncreace>();
+        icons.Add(carryEffects.resistanceIncreace.Init(this));
 
         carryEffects.resistanceDecrease = gameObject.AddComponent<ResistanceDecrease>();
         icons.Add(carryEffects.resistanceDecrease.Init(this));
@@ -140,7 +140,7 @@ public class Unit : MonoBehaviour
     public int OnAttack(int damage)
     {
         carryEffects.bleeding.Trigger();
-        return damage + attackBoost;
+        return damage + damageBoost;
     }
 
     public bool GetDamage(int damageValue, attackType type, attackAttribute attribute)//未実装箇所あり。ダメージ量アップ
@@ -168,7 +168,7 @@ public class Unit : MonoBehaviour
 
     public void EndTrigger()
     {
-        attackBoost = 0;
+        damageBoost = 0;
         resistanceBoost = 0;
         //攻撃力増加処理
         carryEffects.attackBoost.Trigger();

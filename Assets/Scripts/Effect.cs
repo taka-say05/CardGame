@@ -25,7 +25,7 @@ public abstract class Effect : MonoBehaviour
     }
 
 
-    public void AddStack(int value)
+    public virtual void AddStack(int value)
     {
         stack += value;
         if (stack <= 0)

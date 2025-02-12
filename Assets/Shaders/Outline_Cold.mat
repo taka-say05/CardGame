@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - ETC1_EXTERNAL_ALPHA
+  - _CONNECTEDALPHA_ON
   - _FRAMEMODE_GENERAL
   - _OUTLINEENABLED_ON
   - _OUTLINEMODE_SOLID
@@ -36,13 +37,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ConnectedAlpha: 0
+    - _ConnectedAlpha: 1
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlinePosition: 0
     - _OutlineShape: 0
     - _Thickness: 7
     m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _GradientOutline1: {r: 0, g: 0, b: 0, a: 1}
-    - _SolidOutline: {r: 0, g: 0.8884294, b: 1, a: 0.3882353}
+    - _SolidOutline: {r: 0, g: 0.89411765, b: 1, a: 0.3882353}
   m_BuildTextureStacks: []

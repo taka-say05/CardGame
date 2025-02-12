@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Effect\Poison.cs" />
     <Compile Include="Assets\Scripts\Effect\Crystalize.cs" />
+    <Compile Include="Assets\Scripts\Effect\ResistanceIncreace.cs" />
     <Compile Include="Assets\Scripts\Card\Sapphire.cs" />
     <Compile Include="Assets\Scripts\Effect\Burn.cs" />
     <Compile Include="Assets\Scripts\Effect\AttackBoost.cs" />

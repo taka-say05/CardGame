@@ -5,7 +5,7 @@ public class AttackBoost : Effect
     //ターン開始時呼び出す。スタックはその時用で、即時上昇させたい場合は直接unitのやつをいじる
     public override void Trigger()
     {
-        carrierUnit.attackBoost += stack;
+        carrierUnit.damageBoost += stack;
         BoostText(stack);
         stack = 0;
     }

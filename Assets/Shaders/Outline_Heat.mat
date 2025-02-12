@@ -44,5 +44,5 @@ Material:
     - _Thickness: 7
     m_Colors:
     - _GradientOutline1: {r: 0, g: 0, b: 0, a: 1}
-    - _SolidOutline: {r: 1, g: 0.1549632, b: 0, a: 0.6745098}
+    - _SolidOutline: {r: 1, g: 0.3174439, b: 0, a: 0.6745098}
   m_BuildTextureStacks: []

@@ -14,8 +14,8 @@ public class Alexandrite : Card
         if (targetUnit.carryEffects.crystalize.stack >= 5)
         {
             int addCount = 0;
-            addCount += targetUnit.attackBoost > 0? targetUnit.attackBoost : 0;
-            targetUnit.attackBoost = 0;
+            addCount += targetUnit.damageBoost > 0? targetUnit.damageBoost : 0;
+            targetUnit.damageBoost = 0;
             addCount += targetUnit.resistanceBoost > 0? targetUnit.resistanceBoost : 0;
             targetUnit.resistanceBoost = 0;
             targetUnit.resistanceBoost -= addCount;

@@ -23,6 +23,6 @@ public class Jade : Card
 
     void Hit_1()
     {
-
+        
     }
 }

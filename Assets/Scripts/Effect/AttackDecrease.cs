@@ -6,7 +6,7 @@ public class AttackDecrease : Effect
     public override void Trigger()
     {
         Debug.Log("Decrease");
-        carrierUnit.attackBoost -= stack;
+        carrierUnit.damageBoost -= stack;
         DecreaseText(stack);
         stack = 0;
     }
