@@ -178,6 +178,9 @@ public class Unit : MonoBehaviour
         carryEffects.poison.Trigger();
         //結晶化
         carryEffects.crystalize.Trigger();
+
+        //ダメージ・耐性の増加、減少をリセット
+        carryEffects.resistanceDecrease.Trigger();
     }
 
     public void AddActiveIcon(GameObject icon)
