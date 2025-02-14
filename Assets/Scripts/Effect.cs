@@ -25,8 +25,9 @@ public abstract class Effect : MonoBehaviour
     }
 
 
-    public virtual void AddStack(int value)
+    public virtual void AddStack(int value, int index = 0)
     {
+        //‚±‚±‚ğ•ÏX‚ÍAUŒ‚ˆĞ—Í‚â‘Ï«‚Ì‘‰ÁŒø‰Ê‚Ì‚Ù‚¤‚à•ÏX
         stack += value;
         if (stack <= 0)
         {
@@ -40,7 +41,7 @@ public abstract class Effect : MonoBehaviour
         text.text = value.ToString();
     }
 
-    protected void DecrementStack(int value)
+    public virtual void DecrementStack(int value, int index = 0)
     {
         stack -= value;
         if (stack <= 0)

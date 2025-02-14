@@ -147,7 +147,7 @@ public abstract class Card : MonoBehaviour
 
     protected void Attack(int damageValue, attackType type, attackAttribute attribute, Action onHit = null, Unit target = null)
     {
-        damageValue = ownerUnit.OnAttack(damageValue);
+        damageValue = ownerUnit.OnAttack(damageValue, type, attribute);
 
         target ??= targetUnit;
 

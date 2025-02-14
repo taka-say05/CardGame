@@ -1,6 +1,5 @@
 using UnityEngine;
 
-//Š„‡‘Ï«‘‰Á‚Á‚Ä‚Ì‚Í’N‚ÉH
 public class Topaz : Card
 {
     public override void Use()
@@ -18,7 +17,7 @@ public class Topaz : Card
                     dataBox.enemyUnits[i].carryEffects.burn.AddStack(targetUnit.carryEffects.burn.stack / 2);
                 }
             }
-            ownerUnit.resistanceBoost += 20;
+            ownerUnit.carryEffects.resistanseIncrease.AddStack(20, 8);
         }
     }
 

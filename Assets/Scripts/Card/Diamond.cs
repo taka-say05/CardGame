@@ -6,7 +6,7 @@ public class Diamond : Card
 {
     public override void OnTurnStart()
     {
-        ownerUnit.resistanceBoost += 15;
+        ownerUnit.carryEffects.resistanseIncrease.AddStack(15);
         base.OnTurnStart();
     }
 

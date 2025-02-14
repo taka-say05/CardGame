@@ -5,7 +5,7 @@ public class Jade : Card
 {
     public override void OnTurnStart()
     {
-        targetUnit.carryEffects.attackDecrease.AddStack(75);
+        targetUnit.carryEffects.attackDecrease.AddStack(75, 8);
 
         base.OnTurnStart();
     }
@@ -23,6 +23,8 @@ public class Jade : Card
 
     void Hit_1()
     {
-        
+        targetUnit.carryEffects.resistanseDecrease.AddStack(10, (int)attackAttribute.Crystal + 3);
+        targetUnit.carryEffects.crystalize.AddStack(1);
+        targetUnit.carryEffects.attackDecrease.DecrementStack
     }
 }

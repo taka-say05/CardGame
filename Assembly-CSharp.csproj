@@ -65,7 +65,6 @@
     <Compile Include="Assets\Scripts\Effect\ResistanceIncreace.cs" />
     <Compile Include="Assets\Scripts\Card\Sapphire.cs" />
     <Compile Include="Assets\Scripts\Effect\Burn.cs" />
-    <Compile Include="Assets\Scripts\Effect\AttackBoost.cs" />
     <Compile Include="Assets\Scripts\Card\Jade.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\Effect.cs" />
@@ -80,7 +79,8 @@
     <Compile Include="Assets\Scripts\Card.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
-    <Compile Include="Assets\Scripts\Effect\ResistanceDecrease.cs" />
+    <Compile Include="Assets\Scripts\Effect\AttackIncrease.cs" />
+    <Compile Include="Assets\Scripts\Effect\ResistanseDecrease.cs" />
     <Compile Include="Assets\Scripts\Effect\Freeze.cs" />
     <Compile Include="Assets\Scripts\DataBox.cs" />
     <Compile Include="Assets\Scripts\BezierCurve.cs" />

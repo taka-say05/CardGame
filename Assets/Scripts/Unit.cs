@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum attackType
@@ -34,15 +33,8 @@ public class Unit : MonoBehaviour
     public int speed = 3;
     [System.NonSerialized] public int hpMax = 50;
 
-    [System.NonSerialized] public int damageBoost = 0;
-    [System.NonSerialized] public int resistanceBoost = 0;
-    [System.NonSerialized] public int[] boostAttribute = new int[5];
-    [System.NonSerialized] public int[] boostType = new int[3];
-    [System.NonSerialized] public int[] resistanceAttribute = new int[5];
-    [System.NonSerialized] public int[] resistanceType = new int[3];
-
     public struct Effects {
-        public AttackBoost attackBoost;
+        public AttackIncrease attackIncrease;
         public AttackDecrease attackDecrease;
         public Bleeding bleeding;
         public Burn burn;
@@ -50,8 +42,8 @@ public class Unit : MonoBehaviour
         public Freeze freeze;
         public Laceration laceration;
         public Poison poison;
-        public ResistanceIncreace resistanceIncreace;
-        public ResistanceDecrease resistanceDecrease;
+        public ResistanseIncrease resistanseIncrease;
+        public ResistanseDecrease resistanseDecrease;
     }
 
     [System.NonSerialized] public Effects carryEffects;
@@ -66,8 +58,8 @@ public class Unit : MonoBehaviour
         hpMax = hp;
         hpText.text = hpMax.ToString();
 
-        carryEffects.attackBoost = gameObject.AddComponent<AttackBoost>();
-        icons.Add(carryEffects.attackBoost.Init(this));
+        carryEffects.attackIncrease = gameObject.AddComponent<AttackIncrease>();
+        icons.Add(carryEffects.attackIncrease.Init(this));
 
         carryEffects.attackDecrease = gameObject.AddComponent<AttackDecrease>();
         icons.Add(carryEffects.attackDecrease.Init(this));
@@ -90,11 +82,11 @@ public class Unit : MonoBehaviour
         carryEffects.poison = gameObject.AddComponent<Poison>();
         icons.Add(carryEffects.poison.Init(this));
 
-        carryEffects.resistanceIncreace = gameObject.AddComponent<ResistanceIncreace>();
-        icons.Add(carryEffects.resistanceIncreace.Init(this));
+        carryEffects.resistanseIncrease = gameObject.AddComponent<ResistanseIncrease>();
+        icons.Add(carryEffects.resistanseIncrease.Init(this));
 
-        carryEffects.resistanceDecrease = gameObject.AddComponent<ResistanceDecrease>();
-        icons.Add(carryEffects.resistanceDecrease.Init(this));
+        carryEffects.resistanseDecrease = gameObject.AddComponent<ResistanseDecrease>();
+        icons.Add(carryEffects.resistanseDecrease.Init(this));
 
         DataBox data = GameObject.FindGameObjectWithTag("DataBox").GetComponent<DataBox>();
         if (player)
@@ -137,10 +129,36 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public int OnAttack(int damage)
+    public int OnAttack(int damageValue, attackType type, attackAttribute attribute)
     {
         carryEffects.bleeding.Trigger();
-        return damage + damageBoost;
+
+        int decreaceDamage = 0;
+        int increaceDamage = 0;
+
+        if (carryEffects.attackDecrease.attackDecrease[(int)type] != 0)
+        {
+            decreaceDamage += (int)(damageValue * carryEffects.attackDecrease.attackDecrease[(int)type] / 100);
+        }
+
+        if (carryEffects.attackIncrease.attackIncrease[(int)type] != 0)
+        {
+            increaceDamage += (int)(damageValue * carryEffects.attackIncrease.attackIncrease[(int)type] / 100);
+        }
+
+        if (carryEffects.attackDecrease.attackDecrease[(int)attribute + 3] != 0)
+        {
+            decreaceDamage += (int)(damageValue * carryEffects.attackDecrease.attackDecrease[(int)type] / 100);
+        }
+
+        if (carryEffects.attackIncrease.attackIncrease[(int)attribute + 3] != 0)
+        {
+            increaceDamage += (int)(damageValue * carryEffects.attackIncrease.attackIncrease[(int)type] / 100);
+        }
+
+        damageValue = damageValue - decreaceDamage + increaceDamage;
+
+        return damageValue;
     }
 
     public bool GetDamage(int damageValue, attackType type, attackAttribute attribute)//未実装箇所あり。ダメージ量アップ
@@ -155,6 +173,31 @@ public class Unit : MonoBehaviour
             damageValue = (int)(damageValue * 1.5f);
         }
 
+        int decreaceDamage = 0;
+        int increaceDamage = 0;
+
+        if (carryEffects.resistanseDecrease.resistanseDecrease[(int)type] != 0)
+        {
+            decreaceDamage += (int)(damageValue * carryEffects.resistanseDecrease.resistanseDecrease[(int)type] / 100);
+        }
+
+        if (carryEffects.resistanseIncrease.resistanseIncrease[(int)type] != 0)
+        {
+            increaceDamage += (int)(damageValue * carryEffects.resistanseIncrease.resistanseIncrease[(int)type] / 100);
+        }
+
+        if (carryEffects.resistanseDecrease.resistanseDecrease[(int)attribute + 3] != 0) 
+        {
+            decreaceDamage += (int)(damageValue * carryEffects.resistanseDecrease.resistanseDecrease[(int)attribute + 3] / 100);
+        }
+
+        if (carryEffects.resistanseIncrease.resistanseIncrease[(int)attribute + 3] != 0)
+        {
+            increaceDamage += (int)(damageValue * carryEffects.resistanseIncrease.resistanseIncrease[(int)attribute + 3] / 100);
+        }
+
+        damageValue = damageValue - decreaceDamage + increaceDamage;
+
         hp -= damageValue;
         greenBar_pivot.transform.localScale = new Vector3(1.0f * hp / hpMax, 1, 1);
         hpText.text = hp.ToString();
@@ -168,10 +211,8 @@ public class Unit : MonoBehaviour
 
     public void EndTrigger()
     {
-        damageBoost = 0;
-        resistanceBoost = 0;
         //攻撃力増加処理
-        carryEffects.attackBoost.Trigger();
+        carryEffects.attackIncrease.Trigger();
         //熱傷効果処理
         carryEffects.burn.Trigger();
         //毒効果処理
@@ -180,7 +221,10 @@ public class Unit : MonoBehaviour
         carryEffects.crystalize.Trigger();
 
         //ダメージ・耐性の増加、減少をリセット
-        carryEffects.resistanceDecrease.Trigger();
+        carryEffects.resistanseIncrease.Trigger();
+        carryEffects.resistanseDecrease.Trigger();
+        carryEffects.attackIncrease.Trigger();
+        carryEffects.attackDecrease.Trigger();
     }
 
     public void AddActiveIcon(GameObject icon)
