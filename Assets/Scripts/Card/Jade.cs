@@ -18,13 +18,20 @@ public class Jade : Card
     void FirstAttack()
     {
         Attack(1, attackType.Impact, attackAttribute.Crystal, Hit_1);
-        targetUnit.carryEffects.crystalize.AddStack(5);
     }
 
     void Hit_1()
     {
         targetUnit.carryEffects.resistanseDecrease.AddStack(10, (int)attackAttribute.Crystal + 3);
         targetUnit.carryEffects.crystalize.AddStack(1);
-        targetUnit.carryEffects.attackDecrease.DecrementStack
+        targetUnit.carryEffects.attackDecrease.DecrementStack(25, 8);
+        if (targetUnit.carryEffects.attackDecrease.stack[8] <= 0)
+        {
+            FirstAttack();
+        }
+        else
+        {
+
+        }
     }
 }

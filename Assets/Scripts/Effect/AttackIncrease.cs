@@ -1,20 +1,6 @@
 using UnityEngine;
 
-public class AttackIncrease : Effect
+public class AttackIncrease : Fluctuation
 {
-    //attackTypeで３つ、attackAttributeで５つ、属性関係なしで1つの合計サイズ9の配列
-    public int[] attackIncrease = new int[9];
-    public override void AddStack(int value, int index)
-    {
-        attackIncrease[index] += value;
-    }
 
-    //ターン終了時スタックを消滅
-    public override void Trigger()
-    {
-        for (int i = 0; i < attackIncrease.Length; i++)
-        {
-            attackIncrease[i] = 0;
-        }
-    }
 }

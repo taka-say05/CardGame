@@ -12,12 +12,12 @@ public class Opal : Card
 
         Attack(15, type, attribute);
 
-        Attack(20, type, attribute, OnHit);
+        Attack(20, type, attribute, Hit_2);
     }
 
-    private void OnHit()
+    private void Hit_2()
     {
-        targetUnit.boostType[(int)type] -= 10;
-        targetUnit.boostAttribute[(int)attribute] -= 10;
+        targetUnit.carryEffects.attackDecrease.AddStack(10, (int)type);
+        targetUnit.carryEffects.attackDecrease.AddStack(10, (int)attribute + 3);
     }
 }

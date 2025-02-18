@@ -59,10 +59,10 @@ public class Unit : MonoBehaviour
         hpText.text = hpMax.ToString();
 
         carryEffects.attackIncrease = gameObject.AddComponent<AttackIncrease>();
-        icons.Add(carryEffects.attackIncrease.Init(this));
+        icons.AddRange(carryEffects.attackIncrease.InitList(this));
 
         carryEffects.attackDecrease = gameObject.AddComponent<AttackDecrease>();
-        icons.Add(carryEffects.attackDecrease.Init(this));
+        icons.AddRange(carryEffects.attackDecrease.InitList(this));
 
         carryEffects.bleeding = gameObject.AddComponent<Bleeding>();
         icons.Add(carryEffects.bleeding.Init(this));
@@ -83,10 +83,10 @@ public class Unit : MonoBehaviour
         icons.Add(carryEffects.poison.Init(this));
 
         carryEffects.resistanseIncrease = gameObject.AddComponent<ResistanseIncrease>();
-        icons.Add(carryEffects.resistanseIncrease.Init(this));
+        icons.AddRange(carryEffects.resistanseIncrease.InitList(this));
 
         carryEffects.resistanseDecrease = gameObject.AddComponent<ResistanseDecrease>();
-        icons.Add(carryEffects.resistanseDecrease.Init(this));
+        icons.AddRange(carryEffects.resistanseDecrease.InitList(this));
 
         DataBox data = GameObject.FindGameObjectWithTag("DataBox").GetComponent<DataBox>();
         if (player)
@@ -136,24 +136,24 @@ public class Unit : MonoBehaviour
         int decreaceDamage = 0;
         int increaceDamage = 0;
 
-        if (carryEffects.attackDecrease.attackDecrease[(int)type] != 0)
+        if (carryEffects.attackDecrease.stack[(int)type] != 0)
         {
-            decreaceDamage += (int)(damageValue * carryEffects.attackDecrease.attackDecrease[(int)type] / 100);
+            decreaceDamage += (int)(damageValue * carryEffects.attackDecrease.stack[(int)type] / 100);
         }
 
-        if (carryEffects.attackIncrease.attackIncrease[(int)type] != 0)
+        if (carryEffects.attackIncrease.stack[(int)type] != 0)
         {
-            increaceDamage += (int)(damageValue * carryEffects.attackIncrease.attackIncrease[(int)type] / 100);
+            increaceDamage += (int)(damageValue * carryEffects.attackIncrease.stack[(int)type] / 100);
         }
 
-        if (carryEffects.attackDecrease.attackDecrease[(int)attribute + 3] != 0)
+        if (carryEffects.attackDecrease.stack[(int)attribute + 3] != 0)
         {
-            decreaceDamage += (int)(damageValue * carryEffects.attackDecrease.attackDecrease[(int)type] / 100);
+            decreaceDamage += (int)(damageValue * carryEffects.attackDecrease.stack[(int)type] / 100);
         }
 
-        if (carryEffects.attackIncrease.attackIncrease[(int)attribute + 3] != 0)
+        if (carryEffects.attackIncrease.stack[(int)attribute + 3] != 0)
         {
-            increaceDamage += (int)(damageValue * carryEffects.attackIncrease.attackIncrease[(int)type] / 100);
+            increaceDamage += (int)(damageValue * carryEffects.attackIncrease.stack[(int)type] / 100);
         }
 
         damageValue = damageValue - decreaceDamage + increaceDamage;
@@ -176,24 +176,24 @@ public class Unit : MonoBehaviour
         int decreaceDamage = 0;
         int increaceDamage = 0;
 
-        if (carryEffects.resistanseDecrease.resistanseDecrease[(int)type] != 0)
+        if (carryEffects.resistanseDecrease.stack[(int)type] != 0)
         {
-            decreaceDamage += (int)(damageValue * carryEffects.resistanseDecrease.resistanseDecrease[(int)type] / 100);
+            decreaceDamage += (int)(damageValue * carryEffects.resistanseDecrease.stack[(int)type] / 100);
         }
 
-        if (carryEffects.resistanseIncrease.resistanseIncrease[(int)type] != 0)
+        if (carryEffects.resistanseIncrease.stack[(int)type] != 0)
         {
-            increaceDamage += (int)(damageValue * carryEffects.resistanseIncrease.resistanseIncrease[(int)type] / 100);
+            increaceDamage += (int)(damageValue * carryEffects.resistanseIncrease.stack[(int)type] / 100);
         }
 
-        if (carryEffects.resistanseDecrease.resistanseDecrease[(int)attribute + 3] != 0) 
+        if (carryEffects.resistanseDecrease.stack[(int)attribute + 3] != 0) 
         {
-            decreaceDamage += (int)(damageValue * carryEffects.resistanseDecrease.resistanseDecrease[(int)attribute + 3] / 100);
+            decreaceDamage += (int)(damageValue * carryEffects.resistanseDecrease.stack[(int)attribute + 3] / 100);
         }
 
-        if (carryEffects.resistanseIncrease.resistanseIncrease[(int)attribute + 3] != 0)
+        if (carryEffects.resistanseIncrease.stack[(int)attribute + 3] != 0)
         {
-            increaceDamage += (int)(damageValue * carryEffects.resistanseIncrease.resistanseIncrease[(int)attribute + 3] / 100);
+            increaceDamage += (int)(damageValue * carryEffects.resistanseIncrease.stack[(int)attribute + 3] / 100);
         }
 
         damageValue = damageValue - decreaceDamage + increaceDamage;

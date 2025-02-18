@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\Effect\AttackIncrease.cs" />
+    <Compile Include="Assets\Scripts\Fluctuation.cs" />
     <Compile Include="Assets\Scripts\Effect\ResistanseDecrease.cs" />
     <Compile Include="Assets\Scripts\Effect\Freeze.cs" />
     <Compile Include="Assets\Scripts\DataBox.cs" />

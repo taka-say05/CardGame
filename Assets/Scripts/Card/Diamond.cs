@@ -6,7 +6,7 @@ public class Diamond : Card
 {
     public override void OnTurnStart()
     {
-        ownerUnit.carryEffects.resistanseIncrease.AddStack(15);
+        ownerUnit.carryEffects.resistanseIncrease.AddStack(15, 8);
         base.OnTurnStart();
     }
 
@@ -14,20 +14,23 @@ public class Diamond : Card
     {
         Attack(10, attackType.Slash, attackAttribute.Crystal);
 
-        Attack(5, attackType.Slash, attackAttribute.Crystal, OnHit2);
+        Attack(5, attackType.Slash, attackAttribute.Crystal, Hit_2);
 
         ThirdAttack();
     }
 
-    void OnHit2()
+    void Hit_2()
     {
         targetUnit.carryEffects.crystalize.AddStack(1);
     }
 
     void ThirdAttack()
     {
-        Attack(3, attackType.Slash, attackAttribute.Crystal);
+        Attack(3, attackType.Slash, attackAttribute.Crystal, Hit_3);
+    }
 
+    void Hit_3()
+    {
         if (targetUnit.carryEffects.crystalize.stack >= 3)
         {
             targetUnit.carryEffects.crystalize.stack -= 1;

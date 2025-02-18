@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.XR;
 using UnityEngine;
 
 //ターン終了時にリセット（ドローとかデッキ管理とかも）
@@ -14,7 +15,7 @@ public abstract class Effect : MonoBehaviour
     protected GameObject icon;
     TextMeshPro text;
 
-    public GameObject Init(Unit carrierUnit)
+    public virtual GameObject Init(Unit carrierUnit)
     {
         this.carrierUnit = carrierUnit;
         icon = Instantiate((GameObject)Resources.Load(this.GetType().Name), transform);
@@ -25,7 +26,7 @@ public abstract class Effect : MonoBehaviour
     }
 
 
-    public virtual void AddStack(int value, int index = 0)
+    public virtual void AddStack(int value, int index = 999)
     {
         //ここを変更時は、攻撃威力や耐性の増加効果のほうも変更
         stack += value;
@@ -38,18 +39,31 @@ public abstract class Effect : MonoBehaviour
         {
             carrierUnit.AddActiveIcon(icon);
         }
-        text.text = value.ToString();
+        text.text = stack.ToString();
     }
 
-    public virtual void DecrementStack(int value, int index = 0)
+    public virtual void DecrementStack(int value, int index = 999, bool zero = false)
     {
-        stack -= value;
-        if (stack <= 0)
+        //ここを変更時は、攻撃威力や耐性の増加効果のほうも変更
+        if (zero)
         {
             stack = 0;
             carrierUnit.RemoveActiveIcon(icon);
+            text.text = stack.ToString();
         }
-        text.text = stack.ToString();
+        else
+        {
+            if (index == 999)
+            {
+                stack -= value;
+                if (stack <= 0)
+                {
+                    stack = 0;
+                    carrierUnit.RemoveActiveIcon(icon);
+                }
+                text.text = stack.ToString();
+            }
+        }
     }
 
     public abstract void Trigger();
