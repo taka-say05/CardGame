@@ -11,7 +11,7 @@ public class Fluctuation : Effect
 
     TextMeshPro[] texts;
 
-    string[] iconNames = {"Slash","Impact","Pierce","Cold","Crystal","Heat","Lightning","Phycical","" };
+    string[] iconNames = {"Slash","Impact","Pierce","Cold","Crystal","Heat","Lightning","Physical","" };
 
     public GameObject[] InitList(Unit carrierUnit)
     {
