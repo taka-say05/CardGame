@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3390561387472697409, guid: 6d3fe1b50098e344cbdae3c4cd13909a, type: 3}
       propertyPath: m_Name
-      value: ResistanceDecrease
+      value: ResistanceIncrease_Cold
       objectReference: {fileID: 0}
     - target: {fileID: 3390561387472697409, guid: 6d3fe1b50098e344cbdae3c4cd13909a, type: 3}
       propertyPath: m_IsActive
@@ -59,7 +59,7 @@ PrefabInstance:
     - target: {fileID: 8152041031569524085, guid: 6d3fe1b50098e344cbdae3c4cd13909a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 40a3c6a9688ab7f45bedc8fd6aae1448, type: 3}
+      objectReference: {fileID: 21300000, guid: 5030be08fbe06714894801bf91a4ca4f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

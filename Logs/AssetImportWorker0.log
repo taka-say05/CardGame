@@ -15,7 +15,7 @@ C:/Users/say05/UnityProjects/CardGame_1
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52966
+56910
 Successfully changed project path to: C:/Users/say05/UnityProjects/CardGame_1
 C:/Users/say05/UnityProjects/CardGame_1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,14 +49,14 @@ C:/Users/say05/UnityProjects/CardGame_1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3944]  Target information:
+Player connection [20232]  Target information:
 
-Player connection [3944]  * "[IP] 172.28.43.188 [Port] 0 [Flags] 2 [Guid] 407702162 [EditorId] 407702162 [Version] 1048832 [Id] WindowsEditor(7,pc_say) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [20232]  * "[IP] 192.168.11.2 [Port] 0 [Flags] 2 [Guid] 4275009787 [EditorId] 4275009787 [Version] 1048832 [Id] WindowsEditor(7,pc_say) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [3944] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [3944] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20232] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [20232] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-Refreshing native plugins compatible for Editor in 17.58 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 10.41 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.50f1 (c3db7f8bf9b1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/Resources/UnitySubsystems
@@ -72,44 +72,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011563 seconds.
-- Loaded All Assemblies, in  0.720 seconds
+Registered in 0.006526 seconds.
+- Loaded All Assemblies, in  0.377 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.586 seconds
-Domain Reload Profiling: 1306ms
-	BeginReloadAssembly (230ms)
+- Finished resetting the current domain, in  0.308 seconds
+Domain Reload Profiling: 684ms
+	BeginReloadAssembly (129ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (69ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (115ms)
-	LoadAllAssembliesAndSetupDomain (284ms)
-		LoadAssemblies (226ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (142ms)
+		LoadAssemblies (127ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (281ms)
-			TypeCache.Refresh (279ms)
-				TypeCache.ScanAssembly (254ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (587ms)
+		AnalyzeDomain (140ms)
+			TypeCache.Refresh (138ms)
+				TypeCache.ScanAssembly (126ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (308ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (490ms)
+		SetupLoadedEditorAssemblies (260ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (16ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (355ms)
-			ProcessInitializeOnLoadMethodAttributes (90ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (184ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,54 +118,54 @@ Domain Reload Profiling: 1306ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.267 seconds
+- Loaded All Assemblies, in  0.834 seconds
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.546 seconds
-Domain Reload Profiling: 2809ms
-	BeginReloadAssembly (259ms)
+- Finished resetting the current domain, in  0.949 seconds
+Domain Reload Profiling: 1781ms
+	BeginReloadAssembly (203ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (69ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (69ms)
-	LoadAllAssembliesAndSetupDomain (848ms)
-		LoadAssemblies (657ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (543ms)
+		LoadAssemblies (424ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (342ms)
-			TypeCache.Refresh (290ms)
-				TypeCache.ScanAssembly (263ms)
-			ScanForSourceGeneratedMonoScriptInfo (40ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1547ms)
+		AnalyzeDomain (211ms)
+			TypeCache.Refresh (175ms)
+				TypeCache.ScanAssembly (158ms)
+			ScanForSourceGeneratedMonoScriptInfo (29ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (949ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1270ms)
+		SetupLoadedEditorAssemblies (777ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (13ms)
-			SetLoadedEditorAssemblies (15ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (236ms)
-			ProcessInitializeOnLoadAttributes (907ms)
-			ProcessInitializeOnLoadMethodAttributes (90ms)
-			AfterProcessingInitializeOnLoad (10ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (143ms)
+			ProcessInitializeOnLoadAttributes (569ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 7.49 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 4.41 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4704 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 51 unused Assets / (1.9 MB). Loaded Objects now: 5160.
-Memory consumption went from 172.2 MB to 170.3 MB.
-Total: 7.723100 ms (FindLiveObjects: 0.647500 ms CreateObjectMapping: 0.536100 ms MarkObjects: 5.747000 ms  DeleteObjects: 0.789700 ms)
+Memory consumption went from 172.3 MB to 170.3 MB.
+Total: 4.997900 ms (FindLiveObjects: 0.383500 ms CreateObjectMapping: 0.161900 ms MarkObjects: 3.849800 ms  DeleteObjects: 0.600700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -183,321 +183,59 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 6593.545581 seconds.
-  path: Assets/Images/icon/cold_damage_decrease_icon.png
-  artifactKey: Guid(c2775fb4d49885945af6c3c8c93a6f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/icon/cold_damage_decrease_icon.png using Guid(c2775fb4d49885945af6c3c8c93a6f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 105425.123158 seconds.
+  path: Assets/Icon.prefab
+  artifactKey: Guid(6d3fe1b50098e344cbdae3c4cd13909a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icon.prefab using Guid(6d3fe1b50098e344cbdae3c4cd13909a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '7df6e318976f3de857b32ac5ccfa2046') in 0.182027 seconds
+ -> (artifact id: '232ebe2df82bdf3fc33fda222a13b283') in 0.772881 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 16
 ========================================================================
 Received Import Request.
-  Time since last request: 76.208973 seconds.
-  path: Assets/Resources/AttackDecrease_ Cold.prefab
-  artifactKey: Guid(de6966f9b8a7fc548b0b8ce31ad38b52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Cold.prefab using Guid(de6966f9b8a7fc548b0b8ce31ad38b52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 25.599709 seconds.
+  path: Assets/Font/BAHNSCHRIFT SDF_Outline.asset
+  artifactKey: Guid(6fb7d556d818d9c49b142bc0d52d1679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/BAHNSCHRIFT SDF_Outline.asset using Guid(6fb7d556d818d9c49b142bc0d52d1679) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '5e8d7a72ec6c0d35e74d59ea8c1c9fc5') in 1.216832 seconds
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '46e8c13df2015b2fa73be0dd28638c20') in 0.915030 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 4
 ========================================================================
 Received Import Request.
-  Time since last request: 27.771667 seconds.
-  path: Assets/Resources/AttackDecrease_ Crystal.prefab
-  artifactKey: Guid(1d09ce3a5f049f64c9774bca77e2d444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Crystal.prefab using Guid(1d09ce3a5f049f64c9774bca77e2d444) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+  Time since last request: 12.669990 seconds.
+  path: Assets/Arrow.prefab
+  artifactKey: Guid(4b4e6e745537ed2409b65b5a7cd2845d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arrow.prefab using Guid(4b4e6e745537ed2409b65b5a7cd2845d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'c086054f018fb098385a9f23ab0c628c') in 0.994242 seconds
+ -> (artifact id: 'c725e40e16325613a1d878bbe14cb6d8') in 0.040096 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 16
 ========================================================================
 Received Import Request.
-  Time since last request: 11.575647 seconds.
-  path: Assets/Resources/AttackDecrease_ Heat.prefab
-  artifactKey: Guid(95199aebd348db54396427bc18c01fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Heat.prefab using Guid(95199aebd348db54396427bc18c01fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '6a0ad3d812fba7c67cc209ae2dcfab94') in 1.005305 seconds
+  Time since last request: 0.475334 seconds.
+  path: Assets/SpriteOutline
+  artifactKey: Guid(a79c0c1e65964054fa57517a69d83d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpriteOutline using Guid(a79c0c1e65964054fa57517a69d83d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4fedc789d409e9c3fbcb7bef7da0ab46') in 0.000706 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 11.626425 seconds.
-  path: Assets/Resources/AttackDecrease_ Impact.prefab
-  artifactKey: Guid(6b1f687c1e28e714a87ae03bb53bfb13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Impact.prefab using Guid(6b1f687c1e28e714a87ae03bb53bfb13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '3cf6c43b853cfc714f8c67d5802df536') in 1.061847 seconds
+  Time since last request: 24.298362 seconds.
+  path: Assets/DefaultAnimation.anim
+  artifactKey: Guid(9d576d81417c8c648a71ba5417a59942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DefaultAnimation.anim using Guid(9d576d81417c8c648a71ba5417a59942) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c831b0f4ef6811e212c93ac97af40944') in 0.001931 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 117.997687 seconds.
-  path: Assets/Images/icon/lightning_damage_decrease_icon.png
-  artifactKey: Guid(4bd378141a28c3842a20df8a35d8373d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/icon/lightning_damage_decrease_icon.png using Guid(4bd378141a28c3842a20df8a35d8373d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '70782c01f72d4c7add7f3040c5d5f090') in 0.049952 seconds
+  Time since last request: 131.079412 seconds.
+  path: Assets/Scripts/Card/Alexandrite.cs
+  artifactKey: Guid(9b3d8467569eee14f9006ab7df11adf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Card/Alexandrite.cs using Guid(9b3d8467569eee14f9006ab7df11adf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '736ff4672b2dc6594bee2d4eaa74f548') in 0.001120 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 22.782639 seconds.
-  path: Assets/Resources/AttackDecrease_ Lightning.prefab
-  artifactKey: Guid(b3082512874fa5242ad769652e23ff1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Lightning.prefab using Guid(b3082512874fa5242ad769652e23ff1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '52c85f83bddc523a1aa8b2b3aa7c6acf') in 0.991237 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 68.471520 seconds.
-  path: Assets/Resources/AttackDecrease_ Physical.prefab
-  artifactKey: Guid(17b344c36232c9f43ac135a61d71d8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Physical.prefab using Guid(17b344c36232c9f43ac135a61d71d8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'f9dcd9cfec2db6443d96f542b9f0bbb7') in 1.050692 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 52.905963 seconds.
-  path: Assets/Images/icon/pierce_damage_decrease_icon.png
-  artifactKey: Guid(9cc0937bf89a8af4cae1c1af286b8595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/icon/pierce_damage_decrease_icon.png using Guid(9cc0937bf89a8af4cae1c1af286b8595) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'ee7d5060fd41eb22889684a0fba36d3e') in 0.054158 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 15.645150 seconds.
-  path: Assets/Resources/AttackDecrease_ Pierce.prefab
-  artifactKey: Guid(fe25921803d3bdc4782d630c2865ea7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Pierce.prefab using Guid(fe25921803d3bdc4782d630c2865ea7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '73451e731a471513bf9779bfc811d56f') in 1.041843 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 6.956388 seconds.
-  path: Assets/Resources/AttackDecrease_ Slash.prefab
-  artifactKey: Guid(1d2e50adfe7b4684290bcca762d4156a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackDecrease_ Slash.prefab using Guid(1d2e50adfe7b4684290bcca762d4156a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'df1fe1260e021a23305fac73cde85732') in 1.004382 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 21.378129 seconds.
-  path: Assets/Resources/AttackIncrease_ Cold.prefab
-  artifactKey: Guid(8092a278fc7a82e42987baf24cf58f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Cold.prefab using Guid(8092a278fc7a82e42987baf24cf58f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '8f223c9041b0dbdc58bea6fb4306df3d') in 1.083731 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 14.645024 seconds.
-  path: Assets/Resources/AttackIncrease_ Crystal.prefab
-  artifactKey: Guid(7196efa4ee9cdd643ad8b923cb299006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Crystal.prefab using Guid(7196efa4ee9cdd643ad8b923cb299006) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '3c8af654d3330cfc83557819c1df72b3') in 0.983442 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 6.543870 seconds.
-  path: Assets/Resources/AttackIncrease_ Heat.prefab
-  artifactKey: Guid(5e4bfeb6751d555458baab97c6625819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Heat.prefab using Guid(5e4bfeb6751d555458baab97c6625819) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '43a3d541099cd12e59c286b37257e623') in 1.034992 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 6.961914 seconds.
-  path: Assets/Resources/AttackIncrease_ Impact.prefab
-  artifactKey: Guid(4395ba2e26f70dc429c30df9eacde58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Impact.prefab using Guid(4395ba2e26f70dc429c30df9eacde58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '77a50e8a2910f801fa405f24bd93bad8') in 1.000049 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 8.957269 seconds.
-  path: Assets/Resources/AttackIncrease_ Lightning.prefab
-  artifactKey: Guid(c40a5a1733536cb488588e90e15ab807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Lightning.prefab using Guid(c40a5a1733536cb488588e90e15ab807) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '110cdcad5dfd252ab89d2a71918c69c5') in 1.006976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 12.451487 seconds.
-  path: Assets/Resources/AttackIncrease_ Physical.prefab
-  artifactKey: Guid(26519b7804473304eacb3ee2cf1a0b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Physical.prefab using Guid(26519b7804473304eacb3ee2cf1a0b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '5faa0659f2faa013afabf477bae5dc27') in 1.000875 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 0.373199 seconds.
-  path: Assets/Resources/AttackIncrease_ Pierce.prefab
-  artifactKey: Guid(77c3fa93d446e9a4aa7feccbb4dead29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Pierce.prefab using Guid(77c3fa93d446e9a4aa7feccbb4dead29) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'dd425b971fe01c902910a1db211eda2f') in 1.002225 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 6.030692 seconds.
-  path: Assets/Resources/AttackIncrease_ Pierce.prefab
-  artifactKey: Guid(77c3fa93d446e9a4aa7feccbb4dead29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Pierce.prefab using Guid(77c3fa93d446e9a4aa7feccbb4dead29) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'c10bcc40c8c33ba653d286c2b9faac1d') in 0.998540 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 5.880882 seconds.
-  path: Assets/Resources/AttackIncrease_ Slash.prefab
-  artifactKey: Guid(001c7b9725b601248b84f68463a44334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_ Slash.prefab using Guid(001c7b9725b601248b84f68463a44334) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'd8e983253db4ffc44b21c6490d3f40d9') in 0.988151 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 9.567422 seconds.
-  path: Assets/Resources/ResistanceDecrease.prefab
-  artifactKey: Guid(8fa637c442cca724e8f67ef9bb596a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease.prefab using Guid(8fa637c442cca724e8f67ef9bb596a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '9d527b2771f2bcbe0336961cdfca1f45') in 0.996838 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 3.497466 seconds.
-  path: Assets/Resources/ResistanceDecrease 1.prefab
-  artifactKey: Guid(2025d717f4bad594cb8f9053d23fc6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease 1.prefab using Guid(2025d717f4bad594cb8f9053d23fc6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '66f9454e303778d04cb6a4a90535533a') in 1.000141 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 13.489755 seconds.
-  path: Assets/Resources/ResistanceDecrease_Cold.prefab
-  artifactKey: Guid(2025d717f4bad594cb8f9053d23fc6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_Cold.prefab using Guid(2025d717f4bad594cb8f9053d23fc6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '77c8996f004830591691bfbc950c0f27') in 1.006013 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 2.402234 seconds.
-  path: Assets/Resources/ResistanceDecrease_.prefab
-  artifactKey: Guid(8fa637c442cca724e8f67ef9bb596a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_.prefab using Guid(8fa637c442cca724e8f67ef9bb596a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '3f8d44c1ae1b8482778ef4a1efadf8fc') in 1.043168 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 7.723483 seconds.
-  path: Assets/Resources/ResistanceDecrease_ 1.prefab
-  artifactKey: Guid(e4a3dedd18cc75f4ab0107e86f3fc25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ 1.prefab using Guid(e4a3dedd18cc75f4ab0107e86f3fc25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '03c91484167bc52300cb4ddf6ae44265') in 0.984403 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 6.502508 seconds.
-  path: Assets/Resources/AttackIncrease_Cold.prefab
-  artifactKey: Guid(8092a278fc7a82e42987baf24cf58f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/AttackIncrease_Cold.prefab using Guid(8092a278fc7a82e42987baf24cf58f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'fd2d9d55e06711addbfab35a867c757b') in 0.943065 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 17.841060 seconds.
-  path: Assets/Resources/ResistanceDecrease_ Cold.prefab
-  artifactKey: Guid(2025d717f4bad594cb8f9053d23fc6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ Cold.prefab using Guid(2025d717f4bad594cb8f9053d23fc6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '2b46e4d8a4513599b106e9f4935e1472') in 0.973943 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 5.075337 seconds.
-  path: Assets/Resources/ResistanceDecrease_ Heat.prefab
-  artifactKey: Guid(e4a3dedd18cc75f4ab0107e86f3fc25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ Heat.prefab using Guid(e4a3dedd18cc75f4ab0107e86f3fc25b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '5b1be66fda32416d80f79fc0e7e3e3c2') in 0.973022 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 0.244662 seconds.
-  path: Assets/Resources/ResistanceDecrease_ Heat 1.prefab
-  artifactKey: Guid(75b8b37d174b19a4fa77c6a687da0e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ Heat 1.prefab using Guid(75b8b37d174b19a4fa77c6a687da0e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: 'b8f8ad6e08d3336905831ebbaae63d3f') in 0.954570 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 6.277863 seconds.
-  path: Assets/Resources/ResistanceDecrease_ Crystal.prefab
-  artifactKey: Guid(75b8b37d174b19a4fa77c6a687da0e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ Crystal.prefab using Guid(75b8b37d174b19a4fa77c6a687da0e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '3398fb9a37ac938de994ad3f36365f44') in 1.036422 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 0.243717 seconds.
-  path: Assets/Resources/ResistanceDecrease_ Crystal 1.prefab
-  artifactKey: Guid(0fa8d663dfd9c5d489f7deccd376da37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ Crystal 1.prefab using Guid(0fa8d663dfd9c5d489f7deccd376da37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '23c438afda8124a91cae2e82abd85602') in 0.926626 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 16.652209 seconds.
-  path: Assets/Resources/ResistanceDecrease_ Physical.prefab
-  artifactKey: Guid(0fa8d663dfd9c5d489f7deccd376da37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/ResistanceDecrease_ Physical.prefab using Guid(0fa8d663dfd9c5d489f7deccd376da37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
- -> (artifact id: '63de5ab76d90ca5c94ef1848871289ac') in 0.988004 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
+Number of asset objects unloaded after import = 0

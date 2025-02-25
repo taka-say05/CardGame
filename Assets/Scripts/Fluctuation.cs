@@ -9,7 +9,7 @@ public class Fluctuation : Effect
     public new int[] stack = new int[9];
     public new GameObject[] icon = new GameObject[9];
 
-    TextMeshPro[] texts;
+    TextMeshPro[] texts = new TextMeshPro[9];
 
     string[] iconNames = {"Slash","Impact","Pierce","Cold","Crystal","Heat","Lightning","Physical","" };
 
@@ -18,9 +18,11 @@ public class Fluctuation : Effect
         this.carrierUnit = carrierUnit;
         for (int i = 0; i < icon.Length; i++)
         {
+            Debug.Log(this.GetType().Name + i.ToString());
             icon[i] = Instantiate((GameObject)Resources.Load(this.GetType().Name + "_" + iconNames[i]), transform);
             stackText = icon[i].transform.Find("text").gameObject;
-            texts[i] = stackText.GetComponent<TextMeshPro>();
+            TextMeshPro text = stackText.GetComponent<TextMeshPro>();
+            texts[i] = text;
         }
 
         return icon;

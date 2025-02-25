@@ -42,8 +42,8 @@ public class Unit : MonoBehaviour
         public Freeze freeze;
         public Laceration laceration;
         public Poison poison;
-        public ResistanseIncrease resistanseIncrease;
-        public ResistanseDecrease resistanseDecrease;
+        public ResistanceIncrease resistanseIncrease;
+        public ResistanceDecrease resistanseDecrease;
     }
 
     [System.NonSerialized] public Effects carryEffects;
@@ -82,10 +82,10 @@ public class Unit : MonoBehaviour
         carryEffects.poison = gameObject.AddComponent<Poison>();
         icons.Add(carryEffects.poison.Init(this));
 
-        carryEffects.resistanseIncrease = gameObject.AddComponent<ResistanseIncrease>();
+        carryEffects.resistanseIncrease = gameObject.AddComponent<ResistanceIncrease>();
         icons.AddRange(carryEffects.resistanseIncrease.InitList(this));
 
-        carryEffects.resistanseDecrease = gameObject.AddComponent<ResistanseDecrease>();
+        carryEffects.resistanseDecrease = gameObject.AddComponent<ResistanceDecrease>();
         icons.AddRange(carryEffects.resistanseDecrease.InitList(this));
 
         DataBox data = GameObject.FindGameObjectWithTag("DataBox").GetComponent<DataBox>();
