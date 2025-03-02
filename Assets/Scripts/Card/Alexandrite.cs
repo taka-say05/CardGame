@@ -4,9 +4,12 @@ public class Alexandrite : Card
 {
     public override void Use()
     {
-        Attack(3, attackType.Pierce, attackAttribute.Crystal, Hit_1);
 
-        Attack(10, attackType.Pierce, attackAttribute.Crystal);
+    }
+
+    void Attack_1()
+    {
+        Attack(3, attackType.Pierce, attackAttribute.Crystal, Hit_1);
     }
 
     void Hit_1()
@@ -21,5 +24,10 @@ public class Alexandrite : Card
 
             targetUnit.carryEffects.resistanseDecrease.AddStack(addValue, 8);
         }
+    }
+
+    void Attack_2()
+    {
+        Attack(10, attackType.Pierce, attackAttribute.Crystal);
     }
 }
